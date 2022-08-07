@@ -1,0 +1,85 @@
+{
+  "chores": [
+    {
+      "id": 1,
+      "choreName": "Sweep",
+      "choreRoom": "Kitchen",
+      "choreTime": 15000,
+      "choreFrequency": 2000000,
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "choreName": "Mop",
+      "choreRoom": "Hall",
+      "choreTime": "010",
+      "choreFrequency": "010",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false
+    },
+    {
+      "id": 4,
+      "choreName": "Dishes",
+      "choreRoom": "Hall",
+      "choreTime": "10",
+      "choreFrequency": "10",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false
+    },
+    {
+      "id": 5,
+      "choreName": "Pet Mouse",
+      "choreRoom": "Bedroom",
+      "choreTime": "100",
+      "choreFrequency": "1",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false
+    },
+    {
+      "id": 6,
+      "choreName": "CLEAN",
+      "choreRoom": "Bedroom",
+      "choreTime": "15",
+      "choreFrequency": "2",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false
+    },
+    {
+      "id": 7,
+      "choreName": "CLEAN",
+      "choreRoom": "Bedroom",
+      "choreTime": "15",
+      "choreFrequency": "2",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false
+    },
+    {
+      "id": 8,
+      "choreName": "CLEAN",
+      "choreRoom": "Bedroom",
+      "choreTime": "15",
+      "choreFrequency": "2",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false
+    },
+    {
+      "choreName": "Pet Mouse",
+      "choreRoom": "Hall",
+      "choreTime": "100",
+      "choreFrequency": "1",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false,
+      "id": 9
+    },
+    {
+      "choreName": "Pet Mouse",
+      "choreRoom": "Bedroom",
+      "choreTime": "600",
+      "choreFrequency": "700",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false,
+      "id": 10
+    }
+  ]
+}
