@@ -72,6 +72,7 @@ function App() {
               // room={rooms}
               // addRoom={addRoom}
               chores={chores}
+              rooms={rooms}
             />
           
           </Route>

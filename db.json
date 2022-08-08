@@ -2,7 +2,18 @@
   "rooms": [
     {
       "roomName": "Kitchen",
-      "chores": [],
+      "chores": [
+        {
+          "choreName" : "Sweep",
+          "isCompleted" : false,
+          "id": 1
+        },
+        {
+          "choreName" : "Mop",
+          "isCompleted" : false,
+          "id" : 2
+        }
+    ],
       "id": 1
     },
     {

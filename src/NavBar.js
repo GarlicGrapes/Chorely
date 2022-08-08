@@ -10,7 +10,7 @@ function NavBar() {
     <div className="navbar">
       <Button 
       component={NavLink} 
-      to="/Home" 
+      to="/" 
       variant = "contained" 
       color="primary"
       >

@@ -1,5 +1,6 @@
 import React from "react";
 import ChoreCard from "./ChoreCard"
+import RoomCard from "./RoomCard";
 // 
 function HomePage({rooms}) {
 
@@ -21,7 +22,8 @@ function HomePage({rooms}) {
 //     }
 // }
 
-const RoomsList = rooms.map(chore => {
+const RoomsList = rooms.map(room => {
+  console.log(room)
   return <RoomCard key={room.id} room={room}/>
 })
 
@@ -29,13 +31,12 @@ const RoomsList = rooms.map(chore => {
   return(
     <div>
         HomePage
-        *ChoreList*
-        <button 
+        <button onClick={() => console.log(rooms)}
         // onClick={onChoresChange}
         > BUTTON </button>
         <ul>
           {/* {listChoresByRoom(chores)} */}
-          {ChoreList}
+          {RoomsList}
         </ul>
     </div>
   )
