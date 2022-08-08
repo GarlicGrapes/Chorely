@@ -6,7 +6,7 @@ import NewChoreForm from './NewChoreForm';
 import NewRoomForm from "./NewRoomForm"
 import LogInPage from './LogInPage';
 import {BrowserRouter, Route, NavLink, Switch, Routes} from "react-router-dom";
-import { ChromeReaderModeSharp } from '@mui/icons-material';
+import { ChromeReaderModeSharp, RoomService } from '@mui/icons-material';
 
 
 function App() {
@@ -46,6 +46,7 @@ function App() {
            
             <NewChoreForm 
               addChore={addChore}
+              rooms={rooms}
             />
 
           </Route>
@@ -54,6 +55,7 @@ function App() {
            
            <NewRoomForm
             addRoom={addRoom}
+            rooms={rooms}
            />
 
          </Route>

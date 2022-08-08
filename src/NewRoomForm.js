@@ -3,7 +3,8 @@ import React, {useState} from "react";
 function NewRoomForm({addRoom}) {
     
     const blankRoomForm = {
-        "roomName": ""
+        "roomName": "",
+        "chores": []
     }
 
     const [roomFormData, setRoomFormData] = useState(blankRoomForm)
@@ -27,13 +28,14 @@ function NewRoomForm({addRoom}) {
             },
             body: JSON.stringify(roomFormData),
         })
-        .then((r) => r.json())
+        .then((r) => {
+            r.json()
+            console.log(r)
+        })
         .then((data) => {
-            console.log(data)
             addRoom(data)
             setRoomFormData(blankRoomForm)
         })
-        // .then((newChore) => setChores([...chores, newChore]))
     }
 
 

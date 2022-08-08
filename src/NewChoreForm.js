@@ -1,18 +1,20 @@
 import React, {useState} from "react";
 
-function NewChoreForm({addChore}) {
+function NewChoreForm({addChore, rooms}) {
     
     const blankChoreForm = {
         "choreName": "",
-        "choreRoom": "",
-        "choreTime": 0,
-        "choreFrequency": 0,
-        "choreStartDate": "AUTOMATIC DATE PULL",
-        "isCompleted" : false
+        "isCompleted": false
     }
 
 
     const [choreFormData, setChoreFormData] = useState(blankChoreForm)
+
+    const roomsMap = rooms.map((room) => {
+        return(
+            <option key={room.id} value={room.roomName}>{room.roomName}</option>
+        )
+    })
 
     function handleChoreChange(e) {
         const key = e.target.id
@@ -33,7 +35,11 @@ function NewChoreForm({addChore}) {
             },
             body: JSON.stringify(choreFormData),
         })
-        .then((r) => r.json())
+        .then((r) => {
+            r.json()
+        console.log(r)
+    }
+            )
         .then((data) => {
             addChore(data)
             setChoreFormData(blankChoreForm)
@@ -56,14 +62,17 @@ function NewChoreForm({addChore}) {
             <br/>
 
             <label htmlFor="choreRoom">Room</label>
-            <input 
+            {/* <input 
                 type="text"
                 id="choreRoom"
                 value={choreFormData.choreRoom}
                 onChange= {handleChoreChange}
-            />
+            /> */}
+            <select>
+                {roomsMap}
+            </select>
 
-            <br/>
+            {/* <br/>
 
             <label htmlFor="choreTime">Time to Complete</label>
             <input 
@@ -73,15 +82,15 @@ function NewChoreForm({addChore}) {
                 onChange= {handleChoreChange}
             />
 
-            <br/>
+            <br/> */}
 
-            <label htmlFor="choreFrequency">How often?</label>
+            {/* <label htmlFor="choreFrequency">How often?</label>
             <input 
                 type="integer"
                 id="choreFrequency"
                 value={choreFormData.choreFrequency}
                 onChange= {handleChoreChange}
-            />
+            /> */}
 
             <br/>
 

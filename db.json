@@ -1,4 +1,16 @@
 {
+  "rooms": [
+    {
+      "roomName": "Kitchen",
+      "chores": [],
+      "id": 1
+    },
+    {
+      "roomName": "Bathroom",
+      "chores": [],
+      "id": 2
+    }
+  ],
   "chores": [
     {
       "id": 1,
@@ -10,19 +22,31 @@
       "isCompleted": false
     },
     {
-      "choreName": "Chore",
-      "choreRoom": "Bed",
-      "choreTime": "1",
-      "choreFrequency": "1",
+      "choreName": "",
+      "choreRoom": "",
+      "choreTime": 0,
+      "choreFrequency": 0,
       "choreStartDate": "AUTOMATIC DATE PULL",
       "isCompleted": false,
       "id": 2
-    }
-  ],
-  "rooms": [
+    },
     {
-      "id:": 1,
-      "roomName": ""
+      "choreName": "",
+      "choreRoom": "",
+      "choreTime": 0,
+      "choreFrequency": 0,
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false,
+      "id": 3
+    },
+    {
+      "choreName": "",
+      "choreRoom": "",
+      "choreTime": 0,
+      "choreFrequency": 0,
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false,
+      "id": 4
     }
   ],
   "users": [
