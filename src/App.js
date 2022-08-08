@@ -32,7 +32,16 @@ function App() {
     setRooms([...rooms, newRoom])
   }
   
-  
+  function deleteChoreApp(choreId, roomId) {
+    console.log("in App", choreId)
+    console.log("in App", roomId)
+  }
+//   function deleteChore(id) {
+//     const updatedChores = room.chores.filter((chore) => {
+//         return chore.id !== id
+//     })
+//     setRoom([...rooms], rooms.chores = updatedChores)
+// }
   
   return (
     <div className="App">
@@ -73,6 +82,7 @@ function App() {
               // addRoom={addRoom}
               chores={chores}
               rooms={rooms}
+              deleteChore={deleteChoreApp}
             />
           
           </Route>

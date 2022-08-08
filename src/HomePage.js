@@ -2,7 +2,7 @@ import React from "react";
 import ChoreCard from "./ChoreCard"
 import RoomCard from "./RoomCard";
 // 
-function HomePage({rooms}) {
+function HomePage({rooms, deleteChore}) {
 
 // function onChoresChange() {
 //     console.log(setChores)

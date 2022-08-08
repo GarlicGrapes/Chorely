@@ -1,17 +1,22 @@
 import React, {useState} from "react";
 
 
-function ChoreCard({chore}) {
+function ChoreCard({chore, handleDeleteChore}) {
     const [checked, setChecked] = useState(false)
 
-    function handleCheck() {
+    function handleCheck(e) {
         setChecked(!checked)
-        console.log(checked)
+        console.log(e)
     }
+
+    function onDeleteClick() {
+        handleDeleteChore(chore.id)
+    }
+
     return(
         <li>
             <ul>
-                <li>
+                <li key={chore.id}>
                 {chore.choreName}
                 <input 
                 type="checkbox"
@@ -19,13 +24,8 @@ function ChoreCard({chore}) {
                 onChange={handleCheck}
 
                 /> 
-                <button onClick={() => console.log(checked)}>log</button>
+                <button onClick={() => onDeleteClick(chore.id)}>🗑️</button>
                 </li>
-                {/* <li>{chore.choreRoom}</li>
-                <li>{chore.choreTime + " mins"}</li>
-                <li>{chore.choreFrequency + "days"}</li> */}
-                {/* <input type="checkbox">{chore.isCompleted}</input> */}
-                
             </ul>        
         </li>
     )
