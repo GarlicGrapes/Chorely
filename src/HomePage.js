@@ -1,7 +1,7 @@
 import React from "react";
 import ChoreCard from "./ChoreCard"
 // 
-function HomePage({chores}) {
+function HomePage({rooms}) {
 
 // function onChoresChange() {
 //     console.log(setChores)
@@ -21,8 +21,8 @@ function HomePage({chores}) {
 //     }
 // }
 
-const ChoreList = chores.map(chore => {
-  return <ChoreCard key={chore.id} chore={chore}/>
+const RoomsList = rooms.map(chore => {
+  return <RoomCard key={room.id} room={room}/>
 })
 
 

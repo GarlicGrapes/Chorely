@@ -18,33 +18,36 @@ function NewChoreForm({addChore, rooms}) {
 
     function handleChoreChange(e) {
         const key = e.target.id
-
+        console.log(e)
         setChoreFormData({
             ...choreFormData,
             [key]: e.target.value
         })
     }
     
+    // function handleNewChoreSubmit(e) {
+    //     e.preventDefault()
+    //     fetch("http://localhost:3000/rooms", {
+    //         method: "PATCH",
+    //         headers: {
+    //             "Content-Type" : "application/json",
+    //             "Accept": "application/json"
+    //         },
+    //         body: JSON.stringify(choreFormData),
+    //     })
+    //     .then((r) => r.json())
+    //     .then((data) => {
+    //         console.log(data)
+    //         // addChore(data)
+    //         setChoreFormData(blankChoreForm)
+    //     })
+    //     // .then((newChore) => setChores([...chores, newChore]))
+    // }
+
     function handleNewChoreSubmit(e) {
         e.preventDefault()
-        fetch("http://localhost:3000/chores", {
-            method: "POST",
-            headers: {
-                "Content-Type" : "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(choreFormData),
-        })
-        .then((r) => {
-            r.json()
-        console.log(r)
-    }
-            )
-        .then((data) => {
-            addChore(data)
-            setChoreFormData(blankChoreForm)
-        })
-        // .then((newChore) => setChores([...chores, newChore]))
+        // addChore(choreFormData)
+        console.log(choreFormData)
     }
 
 
@@ -68,7 +71,7 @@ function NewChoreForm({addChore, rooms}) {
                 value={choreFormData.choreRoom}
                 onChange= {handleChoreChange}
             /> */}
-            <select>
+            <select onChange={handleChoreChange} >
                 {roomsMap}
             </select>
 
