@@ -8,12 +8,22 @@
       "choreFrequency": 2000000,
       "choreStartDate": "AUTOMATIC DATE PULL",
       "isCompleted": false
+    },
+    {
+      "choreName": "Chore",
+      "choreRoom": "Bed",
+      "choreTime": "1",
+      "choreFrequency": "1",
+      "choreStartDate": "AUTOMATIC DATE PULL",
+      "isCompleted": false,
+      "id": 2
     }
   ],
-  "rooms": [ {
-    "id:" : 1,
-    "roomName": ""
-  }
+  "rooms": [
+    {
+      "id:": 1,
+      "roomName": ""
+    }
   ],
   "users": [
     {

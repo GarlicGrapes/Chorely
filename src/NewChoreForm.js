@@ -53,6 +53,8 @@ function NewChoreForm({addChore}) {
                 onChange= {handleChoreChange}
             />
 
+            <br/>
+
             <label htmlFor="choreRoom">Room</label>
             <input 
                 type="text"
@@ -60,6 +62,8 @@ function NewChoreForm({addChore}) {
                 value={choreFormData.choreRoom}
                 onChange= {handleChoreChange}
             />
+
+            <br/>
 
             <label htmlFor="choreTime">Time to Complete</label>
             <input 
@@ -69,6 +73,8 @@ function NewChoreForm({addChore}) {
                 onChange= {handleChoreChange}
             />
 
+            <br/>
+
             <label htmlFor="choreFrequency">How often?</label>
             <input 
                 type="integer"
@@ -76,6 +82,8 @@ function NewChoreForm({addChore}) {
                 value={choreFormData.choreFrequency}
                 onChange= {handleChoreChange}
             />
+
+            <br/>
 
             <input type="submit" value="Add Chore" />
 
