@@ -5,22 +5,22 @@ import HomePage from './HomePage';
 import NewChoreForm from './NewChoreForm';
 import NewRoomForm from "./NewRoomForm"
 import LogInPage from './LogInPage';
-import {BrowserRouter, Route, NavLink, Switch, Routes} from "react-router-dom";
+import { Route, Switch,} from "react-router-dom";
 import { ChromeReaderModeSharp, RoomService } from '@mui/icons-material';
 
 
 function App() {
-  
+
   const [chores, setChores] = useState([])
   const [rooms, setRooms] = useState([])
   
   useEffect(() => {
-    fetch("http://localhost:3000/chores")
-      .then((response) => response.json())
-      .then((data) => setChores(data))
     fetch("http://localhost:3000/rooms")
       .then((response) => response.json())
       .then((roomData) => setRooms(roomData))
+      fetch("http://localhost:3000/chores")
+      .then((response) => response.json())
+      .then((choreData) => setChores(choreData))
       }, [] );
 
 
@@ -31,17 +31,7 @@ function App() {
   function addRoom(newRoom) {
     setRooms([...rooms, newRoom])
   }
-  
-  function deleteChoreApp(choreId, roomId) {
-    console.log("in App", choreId)
-    console.log("in App", roomId)
-  }
-//   function deleteChore(id) {
-//     const updatedChores = room.chores.filter((chore) => {
-//         return chore.id !== id
-//     })
-//     setRoom([...rooms], rooms.chores = updatedChores)
-// }
+
   
   return (
     <div className="App">
@@ -67,29 +57,30 @@ function App() {
             rooms={rooms}
            />
 
-         </Route>
+         </Route> 
 
           <Route exact path="/login">
 
             <LogInPage/>
 
           </Route>
-          
-          <Route exact path="/">
+          <Route exact path="/"> 
 
             <HomePage 
-              // room={rooms}
-              // addRoom={addRoom}
-              chores={chores}
               rooms={rooms}
-              deleteChore={deleteChoreApp}
-            />
+              chores={chores}
+              choreUpdate={setChores}
+              // addRoom={addRoom}
+              // chores={chores}
+              // rooms={rooms}
+              // deleteChore={deleteChore}
+            /> 
           
-          </Route>
+           </Route>
 
 
-
-        </Switch>
+ 
+        </Switch> 
 
       </header>
     </div>

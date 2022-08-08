@@ -2,44 +2,38 @@ import React from "react";
 import ChoreCard from "./ChoreCard"
 import RoomCard from "./RoomCard";
 // 
-function HomePage({rooms, deleteChore}) {
+function HomePage({rooms, chores, choreUpdate}) {
 
-// function onChoresChange() {
-//     console.log(setChores)
-//     console.log(chores)
-// }
-
-// function listChoresByRoom(chores) {
-//     let rooms = []
-//     for (let each in chores) {
-//       if (!(each.room in rooms)) {
-//         rooms = [...rooms, each.room]
-//       }
-//     }
-//     for (let each in rooms) {
-
+  const RoomsList = rooms.map(room => {
+    // console.log(room)
+    return <RoomCard key={room.id} room={room} chores={chores} choreSet={choreUpdate}/>
+  })
+  
+  function handleFetchCheck() {
+    const newChoreSheet=[
+      {
+        "choreName": "Sweep",
+        "isCompleted": false,
+        "id": 1
+      }, {
+        "choreName": "Sweep",
+        "isCompleted": false,
+        "id": 2
+      }
+    ]
     
-//     }
-// }
-
-const RoomsList = rooms.map(room => {
-  console.log(room)
-  return <RoomCard key={room.id} room={room}/>
-})
-
-
-  return(
-    <div>
-        HomePage
-        <button onClick={() => console.log(rooms)}
-        // onClick={onChoresChange}
-        > BUTTON </button>
-        <ul>
-          {/* {listChoresByRoom(chores)} */}
-          {RoomsList}
-        </ul>
-    </div>
-  )
-}
+  }
+    return(
+      <div>
+          HomePage
+          <button onClick={() => console.log(rooms)}
+          > BUTTON </button>
+          <ul>
+            {RoomsList}
+            <button onClick={()=> handleFetchCheck()}>x</button>
+          </ul>
+      </div>
+    )
+  }
 
 export default HomePage;

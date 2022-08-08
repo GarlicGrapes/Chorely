@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 
+function ChoreCard({chore, deleteChore}) {
 
-function ChoreCard({chore, handleDeleteChore}) {
+
     const [checked, setChecked] = useState(false)
 
     function handleCheck(e) {
@@ -9,9 +10,10 @@ function ChoreCard({chore, handleDeleteChore}) {
         console.log(e)
     }
 
-    function onDeleteClick() {
-        handleDeleteChore(chore.id)
+    function handleDeleteClick(choreId) {
+        deleteChore(choreId)
     }
+
 
     return(
         <li>
@@ -22,9 +24,8 @@ function ChoreCard({chore, handleDeleteChore}) {
                 type="checkbox"
                 checked={checked}
                 onChange={handleCheck}
-
                 /> 
-                <button onClick={() => onDeleteClick(chore.id)}>🗑️</button>
+                <button onClick={() => handleDeleteClick(chore.id)}>🗑️</button>
                 </li>
             </ul>        
         </li>

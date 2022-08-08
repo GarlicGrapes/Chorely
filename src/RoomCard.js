@@ -1,32 +1,34 @@
 import React from "react";
 import ChoreCard from "./ChoreCard";
 
-function RoomCard({room, deleteChore }) {
 
-    const choreList = room.chores.map((chore) => {
-        return <ChoreCard key={chore.id} chore={chore} handleDeleteChore={onDelete} room={room}/>
-    })
+function RoomCard({room, chores, choreSet}) {
 
-    function onDelete(choreId) {
-        console.log("in Room" + choreId, room.id)
-        deleteChore(choreId, room.id)
+    // const choreList = room.chores.map((chore) => {
+    //     return <ChoreCard key={chore.id} chore={chore} room={room}/>
+    // })
+
+    function choreRemove(choreId){
+        fetch(`http://localhost:3000/chores/${choreId}`, {
+        method : "DELETE"
+        })
+
+        const choreMap = chores.filter(chore => chore.id !== choreId)
+        console.log(choreMap)
+        choreSet(choreMap)
+
     }
 
-    // function deleteChore(id) {
-    //     fetch(`http://localhost:3000/rooms/${room.id}/chores/`, {
-    //         method: "PATCH"
-    //     })
-        
-    //     // const updatedChores = room.chores.filter((chore) => {
-    //     //     return chore.id !== id
-    //     // })
 
-    //     // setRoom([...room], room.chores = updatedChores)
-    // }
-
-    // function handleDeleteChore(choreId) {
-    //     return [choreId, room.id]
-    // }
+    const choresList = chores.map((chore) => {
+        console.log(chore.choreName)
+        console.log(room.roomName)
+        if(chore.choreRoom == room.roomName) {
+            return (
+                <ChoreCard key={chore.id} chore={chore} deleteChore={choreRemove}/>
+            )
+        }
+    })
 
     return(
         <div>
@@ -34,7 +36,7 @@ function RoomCard({room, deleteChore }) {
                 {room.roomName}
             </h2>
             <ul>
-                {choreList}
+                {choresList}
             </ul>
         </div>
     )

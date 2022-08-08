@@ -2,69 +2,51 @@
   "rooms": [
     {
       "roomName": "Kitchen",
-      "chores": [
-        {
-          "choreName" : "Sweep",
-          "isCompleted" : false,
-          "id": 1
-        },
-        {
-          "choreName" : "Mop",
-          "isCompleted" : false,
-          "id" : 2
-        }
-    ],
       "id": 1
     },
     {
       "roomName": "Bathroom",
-      "chores": [],
       "id": 2
+    },
+    {
+      "roomName": "Bedroom",
+      "chores": [],
+      "id": 3
     }
   ],
   "chores": [
     {
-      "id": 1,
       "choreName": "Sweep",
-      "choreRoom": "Kitchen",
-      "choreTime": 15000,
-      "choreFrequency": 2000000,
-      "choreStartDate": "AUTOMATIC DATE PULL",
-      "isCompleted": false
+      "id": 1,
+      "choreRoom": "Kitchen"
     },
     {
-      "choreName": "",
-      "choreRoom": "",
-      "choreTime": 0,
-      "choreFrequency": 0,
-      "choreStartDate": "AUTOMATIC DATE PULL",
-      "isCompleted": false,
-      "id": 2
+      "choreName": "Mop",
+      "id": 2,
+      "choreRoom": "Kitchen"
     },
     {
-      "choreName": "",
-      "choreRoom": "",
-      "choreTime": 0,
-      "choreFrequency": 0,
-      "choreStartDate": "AUTOMATIC DATE PULL",
-      "isCompleted": false,
-      "id": 3
+      "choreName": "Broom",
+      "id": 4,
+      "choreRoom": "Bathroom"
     },
     {
-      "choreName": "",
-      "choreRoom": "",
-      "choreTime": 0,
-      "choreFrequency": 0,
-      "choreStartDate": "AUTOMATIC DATE PULL",
+      "choreName": "Pet Mouse",
       "isCompleted": false,
-      "id": 4
-    }
-  ],
-  "users": [
+      "id": 5
+    },
     {
-      "id": "",
-      "userName": "",
-      "pw": ""
+      "choreName": "Pet Mouse",
+      "isCompleted": false,
+      "": "Bathroom",
+      "id": 6
+    },
+    {
+      "choreName": "CLEAN",
+      "isCompleted": false,
+      "choreRoom": "",
+      "": "Bathroom",
+      "id": 7
     }
   ]
 }

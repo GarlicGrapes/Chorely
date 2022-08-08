@@ -2,18 +2,20 @@ import React, {useState} from "react";
 
 function NewChoreForm({addChore, rooms}) {
     
+    const [roomValue, setRoomValue] = useState("")
+    const [choreFormData, setChoreFormData] = useState(blankChoreForm)
+
     const blankChoreForm = {
         "choreName": "",
-        "isCompleted": false
+        "isCompleted": false,
+        "choreRoom": ""
     }
 
-
-    const [choreFormData, setChoreFormData] = useState(blankChoreForm)
 
     const roomsMap = rooms.map((room) => {
         return(
             <option key={room.id} value={room.roomName}>{room.roomName}</option>
-        )
+            )
     })
 
     function handleChoreChange(e) {
@@ -25,30 +27,30 @@ function NewChoreForm({addChore, rooms}) {
         })
     }
     
-    // function handleNewChoreSubmit(e) {
-    //     e.preventDefault()
-    //     fetch("http://localhost:3000/rooms", {
-    //         method: "PATCH",
-    //         headers: {
-    //             "Content-Type" : "application/json",
-    //             "Accept": "application/json"
-    //         },
-    //         body: JSON.stringify(choreFormData),
-    //     })
-    //     .then((r) => r.json())
-    //     .then((data) => {
-    //         console.log(data)
-    //         // addChore(data)
-    //         setChoreFormData(blankChoreForm)
-    //     })
-    //     // .then((newChore) => setChores([...chores, newChore]))
-    // }
-
     function handleNewChoreSubmit(e) {
         e.preventDefault()
-        // addChore(choreFormData)
-        console.log(choreFormData)
+        fetch("http://localhost:3000/chores", {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(choreFormData),
+        })
+        .then((r) => r.json())
+        .then((data) => {
+            addChore(data)
+            // addChore(data)
+            setChoreFormData(blankChoreForm)
+        })
+        // .then((newChore) => setChores([...chores, newChore]))
     }
+
+    // function handleNewChoreSubmit(e) {
+    //     e.preventDefault()
+    //     // addChore(choreFormData)
+    //     addChore(e.target.value)
+    // }
 
 
     return(
@@ -71,7 +73,7 @@ function NewChoreForm({addChore, rooms}) {
                 value={choreFormData.choreRoom}
                 onChange= {handleChoreChange}
             /> */}
-            <select onChange={handleChoreChange} >
+            <select value={roomValue} onChange={handleChoreChange} >
                 {roomsMap}
             </select>
 

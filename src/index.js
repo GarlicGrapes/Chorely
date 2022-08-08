@@ -4,16 +4,16 @@ import { BrowserRouter } from "react-router-dom"
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import RoomsProvider from '../context/RoomsProvider'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RoomsProvider>
+
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </RoomsProvider>
+
   </React.StrictMode>
 );
 
