@@ -5,25 +5,6 @@
       "id": 1
     },
     {
-      "roomName": "Bathroom",
-      "id": 2
-    },
-    {
-      "roomName": "Bedroom",
-      "chores": [],
-      "id": 3
-    },
-    {
-      "roomName": "Hallway",
-      "chores": [],
-      "id": 4
-    },
-    {
-      "roomName": "Greenhouse",
-      "chores": [],
-      "id": 5
-    },
-    {
       "roomName": "Greenhouse",
       "chores": [],
       "id": 6
@@ -36,9 +17,10 @@
   ],
   "chores": [
     {
-      "choreName": "Sweep",
-      "id": 1,
-      "choreRoom": "Kitchen"
+      "choreName": "Mop",
+      "isCompleted": false,
+      "choreRoom": "Greenhouse",
+      "id": 1
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import RoomCard from "./RoomCard";
 
-function HomePage({rooms, chores, choreUpdate}) {
+function HomePage({rooms, chores, choreUpdate, roomUpdate}) {
 
   const RoomsList = rooms.map(room => {
     // console.log(room)
@@ -11,8 +11,16 @@ function HomePage({rooms, chores, choreUpdate}) {
       room={room} 
       chores={chores} 
       choreSet={choreUpdate}
+      deleteRoom = {removeRoomFromList}
     />)
   })
+
+  function removeRoomFromList(roomId) {
+    
+    console.log(roomId)
+    const updatedRooms = rooms.filter((room) => room.id !== roomId)
+    roomUpdate(updatedRooms)
+  }
      
     return(
       <div>

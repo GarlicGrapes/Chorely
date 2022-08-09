@@ -4,7 +4,6 @@ import NavBar from './NavBar';
 import HomePage from './HomePage';
 import NewChoreForm from './NewChoreForm';
 import NewRoomForm from "./NewRoomForm"
-import LogInPage from './LogInPage';
 import { Route, Switch,} from "react-router-dom";
 import { ChromeReaderModeSharp, RoomService } from '@mui/icons-material';
 
@@ -59,21 +58,13 @@ function App() {
 
          </Route> 
 
-          <Route exact path="/login">
-
-            <LogInPage/>
-
-          </Route>
           <Route exact path="/"> 
 
             <HomePage 
               rooms={rooms}
               chores={chores}
               choreUpdate={setChores}
-              // addRoom={addRoom}
-              // chores={chores}
-              // rooms={rooms}
-              // deleteChore={deleteChore}
+              roomUpdate={setRooms}
             /> 
           
            </Route>
