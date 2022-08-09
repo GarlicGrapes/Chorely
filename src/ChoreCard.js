@@ -1,14 +1,15 @@
-import React, {useState} from "react";
+import React from "react";
+// import {useState} from "react"
 
 function ChoreCard({chore, deleteChore}) {
 
 
-    const [checked, setChecked] = useState(false)
+    // const [checked, setChecked] = useState(false)
 
-    function handleCheck(e) {
-        setChecked(!checked)
-        console.log(e)
-    }
+    // function handleCheck(e) {
+    //     setChecked(!checked)
+    //     console.log(e)
+    // }
 
     function handleDeleteClick(choreId) {
         deleteChore(choreId)
@@ -22,7 +23,7 @@ function ChoreCard({chore, deleteChore}) {
                 {chore.choreName}
                 <input 
                 type="checkbox"
-                checked={checked}
+                // checked={checked}
                 onChange={handleCheck}
                 /> 
                 <button onClick={() => handleDeleteClick(chore.id)}>🗑️</button>
