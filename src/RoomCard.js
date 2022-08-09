@@ -38,14 +38,21 @@ function RoomCard({room, chores, choreSet, deleteRoom}) {
     })
 
     return(
-        <div>
-            <h2>
-                {room.roomName}
-                <button onClick={handleRoomDelete}> DELETE ROOM </button>
-            </h2>
-            <ul>
+        <div className="roomCard">
+            <tr>
+                <th>
+                    {room.roomName}
+                </th>
+                <th>
+                    <button className="roomButton" onClick={handleRoomDelete}> DELETE ROOM </button>
+                </th>
+            </tr>
+            <tr>
                 {choresList}
-            </ul>
+            </tr>
+
+            
+
         </div>
     )
 }

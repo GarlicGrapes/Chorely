@@ -35,10 +35,27 @@
 }
 .navbar:last-child{
   float:right;
+  margin-right: 0px;
 }
 
 #dropdown {
   color: rgb(42, 89, 247)
+}
+
+.roomCard {
+  border-style:solid;
+  border-color:aqua;
+  margin: 0;
+  text-align: left;
+}
+
+.roomButton {
+  margin-right: 0px !important;
+  
+}
+
+.choreText {
+  font-style:normal
 }
 
 ul {
@@ -51,7 +68,30 @@ li {
   margin: 0;
 }
 
+tr {
+  width: 400px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: large;
+  border-style: solid;
+  border-color: black;
+}
 
+td {
+  border-style: solid;
+  border-color: black;
+  
+}
+
+table {
+  width: 100%;
+}
+
+
+.choreButton{
+  margin-left: 1px !important;
+  float: right !important;
+}
 
 @keyframes App-logo-spin {
   from {

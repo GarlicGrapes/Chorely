@@ -17,15 +17,19 @@ function ChoreCard({chore, deleteChore}) {
 
 
     return(
-        <li key={chore.id}> 
+        <tr key={chore.id}> 
+            <td className="choreText">
             {chore.choreName} 
+            </td>
             {/* <input 
             type="checkbox"
             // checked={checked}
             // onChange={handleCheck}
             />  */}
-            <button onClick={() => handleDeleteClick(chore.id)}>🗑️</button>       
-        </li>
+            <td>
+            <button className="choreButton" onClick={() => handleDeleteClick(chore.id)}>🗑️</button>
+            </td>       
+        </tr>
     )
 }
 

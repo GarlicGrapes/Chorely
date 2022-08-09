@@ -1,17 +1,20 @@
 {
   "rooms": [
     {
-      "roomName": "Kitchen",
-      "id": 1
-    },
-    {
       "roomName": "Hallway",
       "id": 2
     },
     {
-      "roomName": "Kitchen",
-      "chores": [],
-      "id": 3
+      "roomName": "Attic",
+      "id": 5
+    },
+    {
+      "roomName": "Basement",
+      "id": 6
+    },
+    {
+      "roomName": "Greenhouse",
+      "id": 7
     }
   ],
   "chores": [
@@ -40,6 +43,24 @@
       "isCompleted": false,
       "choreRoom": "Hallway",
       "id": 4
+    },
+    {
+      "choreName": "Mop",
+      "isCompleted": false,
+      "choreRoom": "Basement",
+      "id": 5
+    },
+    {
+      "choreName": "Sweep",
+      "isCompleted": false,
+      "choreRoom": "Attic",
+      "id": 6
+    },
+    {
+      "choreName": "Pet Mouse",
+      "isCompleted": false,
+      "choreRoom": "Greenhouse",
+      "id": 7
     }
   ]
 }

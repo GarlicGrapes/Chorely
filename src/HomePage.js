@@ -26,11 +26,13 @@ function HomePage({rooms, chores, choreUpdate, roomUpdate}) {
     return(
       <Box>
       <h2>Welcome to Chorely!</h2>
+      <br/>
+      <h4>Here are your chores: </h4>
 
-          <ul>
-          Here are your chores:
+          <table>
+          
             {RoomsList}
-          </ul>
+          </table>
       </Box>
     )
   }

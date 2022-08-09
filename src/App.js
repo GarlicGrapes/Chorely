@@ -40,25 +40,25 @@ function App() {
 
         <Switch>
         
-          <Route exact path="/createchore">
+        <Route exact path="/createchore">
            
             <NewChoreForm 
               addChore={addChore}
               rooms={rooms}
             />
 
-          </Route>
+        </Route>
 
-          <Route exact path="/createroom">
+        <Route exact path="/createroom">
            
            <NewRoomForm
             addRoom={addRoom}
             rooms={rooms}
            />
 
-         </Route> 
+        </Route> 
 
-          <Route exact path="/"> 
+        <Route exact path="/"> 
 
             <HomePage 
               rooms={rooms}
@@ -67,7 +67,7 @@ function App() {
               roomUpdate={setRooms}
             /> 
           
-           </Route>
+        </Route>
 
 
  
