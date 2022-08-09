@@ -4,7 +4,6 @@ function NewRoomForm({addRoom}) {
 
     const blankRoomForm = {
         "roomName": "",
-        "chores": []
     }
 
     const [roomFormData, setRoomFormData] = useState(blankRoomForm)
@@ -28,10 +27,7 @@ function NewRoomForm({addRoom}) {
             },
             body: JSON.stringify(roomFormData),
         })
-        .then((r) => {
-            r.json()
-            console.log(r)
-        })
+        .then((r) => r.json())
         .then((data) => {
             addRoom(data)
             setRoomFormData(blankRoomForm)
@@ -43,7 +39,7 @@ function NewRoomForm({addRoom}) {
     return(
         <form onSubmit={handleNewRoomSubmit}>
             <h2>Add a Room</h2>
-            <label htmlFor="roomName">Room Name</label>
+            <label htmlFor="roomName">Room Name </label>
             <input 
                 type="text"
                 id="roomName"
