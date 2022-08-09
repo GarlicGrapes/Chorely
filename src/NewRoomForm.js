@@ -51,8 +51,6 @@ function NewRoomForm({addRoom}) {
                 onChange= {handleRoomChange}
             />
             <input type="submit" value="Add Room" />
-            <button onClick={() => console.log(roomFormData)}>TEST DATA</button>
-
         </form>
     )
 
