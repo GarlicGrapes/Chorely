@@ -1,8 +1,6 @@
 import React, {useState} from "react";
-import { useHistory } from "react-router-dom";
 
 function NewRoomForm({addRoom}) {
-    const history = useHistory()
 
     const blankRoomForm = {
         "roomName": "",
@@ -37,8 +35,8 @@ function NewRoomForm({addRoom}) {
         .then((data) => {
             addRoom(data)
             setRoomFormData(blankRoomForm)
-            history.push("/")
         })
+
     }
 
 

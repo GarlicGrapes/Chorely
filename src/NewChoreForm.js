@@ -2,15 +2,14 @@ import React, {useState} from "react";
 
 function NewChoreForm({addChore, rooms}) {
     
-    const [roomValue, setRoomValue] = useState("")
-    const [choreFormData, setChoreFormData] = useState(blankChoreForm)
-
     const blankChoreForm = {
         "choreName": "",
         "isCompleted": false,
         "choreRoom": ""
     }
 
+    const [roomValue, setRoomValue] = useState("")
+    const [choreFormData, setChoreFormData] = useState(blankChoreForm)
 
     const roomsMap = rooms.map((room) => {
         return(
@@ -20,11 +19,16 @@ function NewChoreForm({addChore, rooms}) {
 
     function handleChoreChange(e) {
         const key = e.target.id
-        console.log(e)
+        console.log(e.target.id)
         setChoreFormData({
             ...choreFormData,
             [key]: e.target.value
         })
+    }
+
+    function handleChoreRoomChange(e) {
+        console.log(e.target.value)
+        setChoreFormData({...choreFormData, "roomName": e.target.value})
     }
     
     function handleNewChoreSubmit(e) {
@@ -73,7 +77,7 @@ function NewChoreForm({addChore, rooms}) {
                 value={choreFormData.choreRoom}
                 onChange= {handleChoreChange}
             /> */}
-            <select value={roomValue} onChange={handleChoreChange} >
+            <select id="choreRoom" value={choreFormData.choreRoom} onChange={(e) => handleChoreChange(e)} >
                 {roomsMap}
             </select>
 

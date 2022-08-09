@@ -12,6 +12,26 @@
       "roomName": "Bedroom",
       "chores": [],
       "id": 3
+    },
+    {
+      "roomName": "Hallway",
+      "chores": [],
+      "id": 4
+    },
+    {
+      "roomName": "Greenhouse",
+      "chores": [],
+      "id": 5
+    },
+    {
+      "roomName": "Greenhouse",
+      "chores": [],
+      "id": 6
+    },
+    {
+      "roomName": "Kitchen",
+      "chores": [],
+      "id": 7
     }
   ],
   "chores": [
@@ -19,34 +39,6 @@
       "choreName": "Sweep",
       "id": 1,
       "choreRoom": "Kitchen"
-    },
-    {
-      "choreName": "Mop",
-      "id": 2,
-      "choreRoom": "Kitchen"
-    },
-    {
-      "choreName": "Broom",
-      "id": 4,
-      "choreRoom": "Bathroom"
-    },
-    {
-      "choreName": "Pet Mouse",
-      "isCompleted": false,
-      "id": 5
-    },
-    {
-      "choreName": "Pet Mouse",
-      "isCompleted": false,
-      "": "Bathroom",
-      "id": 6
-    },
-    {
-      "choreName": "CLEAN",
-      "isCompleted": false,
-      "choreRoom": "",
-      "": "Bathroom",
-      "id": 7
     }
   ]
 }
