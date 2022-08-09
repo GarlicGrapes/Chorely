@@ -24,7 +24,7 @@ function ChoreCard({chore, deleteChore}) {
                 <input 
                 type="checkbox"
                 // checked={checked}
-                onChange={handleCheck}
+                // onChange={handleCheck}
                 /> 
                 <button onClick={() => handleDeleteClick(chore.id)}>🗑️</button>
                 </li>

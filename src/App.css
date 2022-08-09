@@ -37,8 +37,12 @@
   float:right;
 }
 
-ul {
+#dropdown {
+  color: rgb(42, 89, 247)
+}
 
+ul {
+  list-style-type: square;
 }
 
 

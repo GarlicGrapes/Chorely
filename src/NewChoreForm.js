@@ -1,4 +1,9 @@
 import React, {useState} from "react";
+import TextField from "@mui/material/TextField";
+import { InputLabel, MenuItem } from "@mui/material";
+import Select from "@mui/material/Select"
+import FormControl from "@mui/material/FormControl";
+import { blue } from "@mui/material/colors";
 
 function NewChoreForm({addChore, rooms}) {
     
@@ -12,7 +17,7 @@ function NewChoreForm({addChore, rooms}) {
 
     const roomsMap = rooms.map((room) => {
         return(
-            <option key={room.id} value={room.roomName}>{room.roomName}</option>
+            <MenuItem key={room.id} value={room.roomName}>{room.roomName}</MenuItem>
             )
     })
 
@@ -51,10 +56,11 @@ function NewChoreForm({addChore, rooms}) {
 
 
     return(
-        <form onSubmit={handleNewChoreSubmit}>
+        <FormControl onSubmit={handleNewChoreSubmit} sx={{minWidth: 150}} variant="filled">
             <h2>Add a Chore</h2>
-            <label htmlFor="choreName">Name</label>
-            <input 
+
+            <TextField 
+                label = "Chore Name"
                 type="text"
                 id="choreName"
                 value={choreFormData.choreName}
@@ -63,17 +69,17 @@ function NewChoreForm({addChore, rooms}) {
 
             <br/>
 
-            <label htmlFor="choreRoom">Room</label>
-
-            <select id="choreRoom" value={choreFormData.choreRoom} onChange={(e) => handleChoreChange(e)} >
+            <InputLabel>Room Name</InputLabel>
+            
+            <Select class="dropdown" id="choreRoom" label={choreFormData.choreRoom} value={choreFormData.choreRoom} onChange={(e) => handleChoreChange(e)} >
                 {roomsMap}
-            </select>
+            </Select>
 
             <br/>
 
             <input type="submit" value="Add Chore" />
 
-        </form>
+        </FormControl>
     )
 
 }

@@ -1,3 +1,4 @@
+import { Box } from "@mui/material/";
 import React from "react";
 import RoomCard from "./RoomCard";
 
@@ -23,12 +24,12 @@ function HomePage({rooms, chores, choreUpdate, roomUpdate}) {
   }
      
     return(
-      <div>
+      <Box>
           HomePage
           <ul>
             {RoomsList}
           </ul>
-      </div>
+      </Box>
     )
   }
 

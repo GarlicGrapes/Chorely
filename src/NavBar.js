@@ -41,16 +41,6 @@ function NavBar() {
 
       </Button>
 
-      <Button 
-      component={NavLink} 
-      to="/login" 
-      variant = "contained" 
-      color="primary"
-      >
-
-      Login
-
-      </Button>
 
     </div>
   )
