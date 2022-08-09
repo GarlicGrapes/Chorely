@@ -8,7 +8,6 @@ function NewChoreForm({addChore, rooms}) {
         "choreRoom": ""
     }
 
-    const [roomValue, setRoomValue] = useState("")
     const [choreFormData, setChoreFormData] = useState(blankChoreForm)
 
     const roomsMap = rooms.map((room) => {
@@ -44,17 +43,11 @@ function NewChoreForm({addChore, rooms}) {
         .then((r) => r.json())
         .then((data) => {
             addChore(data)
-            // addChore(data)
             setChoreFormData(blankChoreForm)
         })
-        // .then((newChore) => setChores([...chores, newChore]))
+
     }
 
-    // function handleNewChoreSubmit(e) {
-    //     e.preventDefault()
-    //     // addChore(choreFormData)
-    //     addChore(e.target.value)
-    // }
 
 
     return(
@@ -71,35 +64,10 @@ function NewChoreForm({addChore, rooms}) {
             <br/>
 
             <label htmlFor="choreRoom">Room</label>
-            {/* <input 
-                type="text"
-                id="choreRoom"
-                value={choreFormData.choreRoom}
-                onChange= {handleChoreChange}
-            /> */}
+
             <select id="choreRoom" value={choreFormData.choreRoom} onChange={(e) => handleChoreChange(e)} >
                 {roomsMap}
             </select>
-
-            {/* <br/>
-
-            <label htmlFor="choreTime">Time to Complete</label>
-            <input 
-                type="integer"
-                id="choreTime"
-                value={choreFormData.choreTime}
-                onChange= {handleChoreChange}
-            />
-
-            <br/> */}
-
-            {/* <label htmlFor="choreFrequency">How often?</label>
-            <input 
-                type="integer"
-                id="choreFrequency"
-                value={choreFormData.choreFrequency}
-                onChange= {handleChoreChange}
-            /> */}
 
             <br/>
 
