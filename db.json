@@ -5,22 +5,35 @@
       "id": 1
     },
     {
-      "roomName": "Greenhouse",
-      "chores": [],
-      "id": 6
+      "roomName": "Hallway",
+      "id": 2
     },
     {
       "roomName": "Kitchen",
       "chores": [],
-      "id": 7
+      "id": 3
     }
   ],
   "chores": [
     {
       "choreName": "Mop",
       "isCompleted": false,
-      "choreRoom": "Greenhouse",
+      "choreRoom": "",
+      "undefined": "Kitchen",
       "id": 1
+    },
+    {
+      "choreName": "Pet Mouse",
+      "isCompleted": false,
+      "choreRoom": "",
+      "undefined": "Hallway",
+      "id": 2
+    },
+    {
+      "choreName": "Mop",
+      "isCompleted": false,
+      "choreRoom": "Hallway",
+      "id": 3
     }
   ]
 }

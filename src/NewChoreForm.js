@@ -4,6 +4,7 @@ import { InputLabel, MenuItem } from "@mui/material";
 import Select from "@mui/material/Select"
 import FormControl from "@mui/material/FormControl";
 import { blue } from "@mui/material/colors";
+import Box from "@mui/material/Box"
 
 function NewChoreForm({addChore, rooms}) {
     
@@ -16,10 +17,11 @@ function NewChoreForm({addChore, rooms}) {
     const [choreFormData, setChoreFormData] = useState(blankChoreForm)
 
     const roomsMap = rooms.map((room) => {
-        return(
-            <MenuItem key={room.id} value={room.roomName}>{room.roomName}</MenuItem>
-            )
+        console.log(room)
+        return <option key={room.id} value={room.roomName}>{room.roomName}</option>
     })
+
+
 
     function handleChoreChange(e) {
         const key = e.target.id
@@ -30,10 +32,10 @@ function NewChoreForm({addChore, rooms}) {
         })
     }
 
-    function handleChoreRoomChange(e) {
-        console.log(e.target.value)
-        setChoreFormData({...choreFormData, "roomName": e.target.value})
-    }
+    // function handleChoreRoomChange(e) {
+    //     console.log(e.target.value)
+    //     setChoreFormData({...choreFormData, "roomName": e.target.value})
+    // }
     
     function handleNewChoreSubmit(e) {
         e.preventDefault()
@@ -47,6 +49,7 @@ function NewChoreForm({addChore, rooms}) {
         })
         .then((r) => r.json())
         .then((data) => {
+            console.log(data)
             addChore(data)
             setChoreFormData(blankChoreForm)
         })
@@ -56,11 +59,13 @@ function NewChoreForm({addChore, rooms}) {
 
 
     return(
-        <FormControl onSubmit={handleNewChoreSubmit} sx={{minWidth: 150}} variant="filled">
+
+        <form onSubmit={handleNewChoreSubmit} sx={{minWidth: 250}} variant="filled">
             <h2>Add a Chore</h2>
 
-            <TextField 
-                label = "Chore Name"
+            <label>Chore Name </label>        
+            <input
+                sx = {{minWidth: 250}}
                 type="text"
                 id="choreName"
                 value={choreFormData.choreName}
@@ -69,17 +74,18 @@ function NewChoreForm({addChore, rooms}) {
 
             <br/>
 
-            <InputLabel>Room Name</InputLabel>
-            
-            <Select class="dropdown" id="choreRoom" label={choreFormData.choreRoom} value={choreFormData.choreRoom} onChange={(e) => handleChoreChange(e)} >
+            <label>Room Name </label>
+
+            <select sx={{minWidth: 250}} class="dropdown" id="choreRoom" value={choreFormData.choreRoom} onChange={(e) => handleChoreChange(e)} >
                 {roomsMap}
-            </Select>
+            </select>
 
             <br/>
 
             <input type="submit" value="Add Chore" />
 
-        </FormControl>
+        </form>
+
     )
 
 }
