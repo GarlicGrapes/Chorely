@@ -33,7 +33,7 @@ Chorely is built on a stack of:
 
 ## Demo
 
-For a demo of the application, go to: YOUTUBE LINK
+For a demo of the application, go to: https://youtu.be/JJrIOJxORrc
 
 ## Contributing
 Feel free to pull and experiment as you like. If you would like to collaborate, you can reach me at twitter.com/GarlicGrapes

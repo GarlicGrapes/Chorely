@@ -3,18 +3,6 @@
     {
       "roomName": "Hallway",
       "id": 2
-    },
-    {
-      "roomName": "Basement",
-      "id": 6
-    },
-    {
-      "roomName": "Greenhouse",
-      "id": 7
-    },
-    {
-      "roomName": "Attic",
-      "id": 8
     }
   ],
   "chores": [
@@ -25,22 +13,16 @@
       "id": 3
     },
     {
-      "choreName": "Dishes",
+      "choreName": "CLEAN",
       "isCompleted": false,
-      "choreRoom": "Greenhouse",
-      "id": 4
+      "choreRoom": "",
+      "id": 8
     },
     {
-      "choreName": "Pet Mouse",
+      "choreName": "CLEAN",
       "isCompleted": false,
-      "choreRoom": "Attic",
-      "id": 5
-    },
-    {
-      "choreName": "Pet Green Bean",
-      "isCompleted": false,
-      "choreRoom": "Basement",
-      "id": 6
+      "choreRoom": "",
+      "id": 9
     }
   ]
 }
