@@ -25,34 +25,22 @@
       "id": 3
     },
     {
-      "choreName": "Pet Mouse",
+      "choreName": "Dishes",
       "isCompleted": false,
-      "choreRoom": "Hallway",
+      "choreRoom": "Greenhouse",
       "id": 4
     },
     {
-      "choreName": "Mop",
+      "choreName": "Pet Mouse",
       "isCompleted": false,
-      "choreRoom": "Basement",
+      "choreRoom": "Attic",
       "id": 5
     },
     {
-      "choreName": "Sweep",
+      "choreName": "Pet Green Bean",
       "isCompleted": false,
-      "choreRoom": "Attic",
+      "choreRoom": "Basement",
       "id": 6
-    },
-    {
-      "choreName": "Pet Mouse",
-      "isCompleted": false,
-      "choreRoom": "Greenhouse",
-      "id": 7
-    },
-    {
-      "choreName": "Dishes",
-      "isCompleted": false,
-      "choreRoom": "Attic",
-      "id": 8
     }
   ]
 }

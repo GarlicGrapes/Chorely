@@ -4,9 +4,6 @@ import ChoreCard from "./ChoreCard";
 
 function RoomCard({room, chores, choreSet, deleteRoom}) {
 
-    // const choreList = room.chores.map((chore) => {
-    //     return <ChoreCard key={chore.id} chore={chore} room={room}/>
-    // })
 
     function handleRoomDelete() {
         fetch(`http://localhost:3000/rooms/${room.id}`, {
@@ -47,11 +44,8 @@ function RoomCard({room, chores, choreSet, deleteRoom}) {
                     <button className="roomButton" onClick={handleRoomDelete}> DELETE ROOM </button>
                 </th>
             </tr>
-            <tr>
-                {choresList}
-            </tr>
-
             
+                {choresList}           
 
         </div>
     )

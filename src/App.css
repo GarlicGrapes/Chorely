@@ -69,7 +69,6 @@ li {
 }
 
 tr {
-  width: 400px;
   font-style: normal;
   font-weight: 500;
   font-size: large;
@@ -83,9 +82,7 @@ td {
   
 }
 
-table {
-  width: 100%;
-}
+
 
 
 .choreButton{
