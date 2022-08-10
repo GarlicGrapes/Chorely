@@ -5,33 +5,19 @@
       "id": 2
     },
     {
-      "roomName": "Attic",
-      "id": 5
-    },
-    {
       "roomName": "Basement",
       "id": 6
     },
     {
       "roomName": "Greenhouse",
       "id": 7
+    },
+    {
+      "roomName": "Attic",
+      "id": 8
     }
   ],
   "chores": [
-    {
-      "choreName": "Mop",
-      "isCompleted": false,
-      "choreRoom": "",
-      "undefined": "Kitchen",
-      "id": 1
-    },
-    {
-      "choreName": "Pet Mouse",
-      "isCompleted": false,
-      "choreRoom": "",
-      "undefined": "Hallway",
-      "id": 2
-    },
     {
       "choreName": "Mop",
       "isCompleted": false,
@@ -61,6 +47,12 @@
       "isCompleted": false,
       "choreRoom": "Greenhouse",
       "id": 7
+    },
+    {
+      "choreName": "Dishes",
+      "isCompleted": false,
+      "choreRoom": "Attic",
+      "id": 8
     }
   ]
 }

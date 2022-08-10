@@ -89,8 +89,7 @@ table {
 
 
 .choreButton{
-  margin-left: 1px !important;
-  float: right !important;
+  margin-right: 1px !important;
 }
 
 @keyframes App-logo-spin {
